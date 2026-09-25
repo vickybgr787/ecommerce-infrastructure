@@ -25,3 +25,19 @@ module "resource_group" {
     managed_by  = "terraform"
   }
 }
+
+module "acr" {
+  source = "../../modules/acr"
+
+  name                = var.acr_name
+  resource_group_name = module.resource_group.name
+  location            = module.resource_group.location
+
+  sku = "Basic"
+
+  tags = {
+    environment = var.environment
+    project     = var.project_name
+    managed_by  = "terraform"
+  }
+}
