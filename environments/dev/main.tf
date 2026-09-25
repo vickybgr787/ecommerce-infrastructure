@@ -41,3 +41,23 @@ module "acr" {
     managed_by  = "terraform"
   }
 }
+
+module "aks" {
+  source = "../../modules/aks"
+
+  name                = var.aks_name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
+  dns_prefix          = var.aks_dns_prefix
+
+  vm_size    = var.aks_vm_size
+  node_count = var.aks_node_count
+  min_count  = var.aks_min_count
+  max_count  = var.aks_max_count
+
+  tags = {
+    environment = var.environment
+    project     = var.project_name
+    managed_by  = "terraform"
+  }
+}

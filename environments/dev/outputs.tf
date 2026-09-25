@@ -27,3 +27,23 @@ output "acr_id" {
   description = "Azure Container Registry resource ID"
   value       = module.acr.id
 }
+
+output "aks_name" {
+  description = "AKS cluster name"
+  value       = module.aks.name
+}
+
+output "aks_id" {
+  description = "AKS cluster resource ID"
+  value       = module.aks.id
+}
+
+output "aks_fqdn" {
+  description = "AKS API server FQDN"
+  value       = module.aks.fqdn
+}
+
+output "aks_kubernetes_version" {
+  description = "AKS Kubernetes version"
+  value       = module.aks.kubernetes_version
+}
