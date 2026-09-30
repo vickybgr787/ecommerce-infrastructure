@@ -49,6 +49,7 @@ module "aks" {
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
   dns_prefix          = var.aks_dns_prefix
+  acr_id              = module.acr.id
 
   vm_size    = var.aks_vm_size
   node_count = var.aks_node_count

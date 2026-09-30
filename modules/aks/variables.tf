@@ -18,10 +18,15 @@ variable "dns_prefix" {
   type        = string
 }
 
+variable "acr_id" {
+  description = "Resource ID of the Azure Container Registry"
+  type        = string
+}
+
 variable "vm_size" {
   description = "VM size for the AKS system node pool"
   type        = string
-  default     = "Standard_D2s_v5"
+  default     = "Standard_EC2ads_v5"
 }
 
 variable "node_count" {
