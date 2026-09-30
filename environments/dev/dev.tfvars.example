@@ -1,0 +1,12 @@
+resource_group_name = "ecommerce-dev-rg"
+location            = "northeurope"
+environment         = "dev"
+project_name        = "ecommerce-platform"
+acr_name            = "ecommercedevacr787"
+
+aks_name       = "ecommerce-dev-aks"
+aks_dns_prefix = "ecommerce-dev-aks"
+aks_vm_size    = "Standard_EC2ads_v5"
+aks_node_count = 2
+aks_min_count  = 2
+aks_max_count  = 3
