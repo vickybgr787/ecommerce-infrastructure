@@ -12,3 +12,8 @@ output "id" {
   description = "ACR resource ID"
   value       = azurerm_container_registry.this.id
 }
+
+output "id" {
+  description = "ACR resource ID"
+  value       = azurerm_container_registry.this.id
+}
